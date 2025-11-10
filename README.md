@@ -1,16 +1,171 @@
-# React + Vite
+# BiteSpeed Chatbot Flow Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A polished, production-grade implementation of the BiteSpeed Frontend Assignment.
 
-Currently, two official plugins are available:
+This project is a fully interactive chatbot flow builder built using **React**, **ReactFlow**, and a custom UI layer. It includes drag-and-drop node creation, node editing, connection rules, toast notifications, validations, and a clean modern interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### 1. Text Message Node
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Adding unlimited Text Message nodes.
+* Drag-and-drop support.
+* Clean, aesthetic node design.
+* Live updating of the node text.
+
+### 2. Nodes Panel
+
+* Listing all available node types (currently only Text Message).
+* Dragging nodes from the left panel into the canvas.
+* Replaced by Settings Panel on node selection.
+
+### 3. Settings Panel
+
+* Appearing when selecting a node.
+* Allowing editing of the selected Text Node.
+* Updating the node content in real-time.
+
+### 4. Connections & Handles
+
+* Adding edges between nodes using ReactFlow.
+* Allowing multiple incoming edges to a target.
+* Restricting to a single outgoing edge from each source handle.
+* Displaying toast notifications when invalid connections are attempted.
+
+### 5. Validation
+
+* Save Flow validates the structure.
+* Showing an error if more than one node has an empty target (multiple root nodes).
+* Printing flow JSON in the DevTools console.
+
+### 6. UI Enhancements
+
+* Custom dark theme.
+* Smooth animations.
+* Floating toolbars.
+* Toast notifications.
+* Hover and selection effects.
+* Animated nodes.
+* Glass-like panels and clean layout.
+
+---
+
+## Tech Stack
+
+* **React 18**
+* **ReactFlow 11**
+* **Framer Motion (optional animations)**
+* **Vite** for fast development
+* **Custom CSS** for styling
+
+---
+
+## Running Locally
+
+### 1. Clone the repository:
+
+```
+ git clone <your-repo-url>
+ cd bitespeed-flow-builder
+```
+
+### 2. Install dependencies:
+
+```
+ npm install
+```
+
+### 3. Start development server:
+
+```
+ npm run dev
+```
+
+### 4. Open in browser:
+
+```
+ http://localhost:5173
+```
+
+---
+
+## Deployment (Vercel)
+
+1. Push this code to GitHub.
+2. Visit [https://vercel.com](https://vercel.com)
+3. Create a new project.
+4. Import the GitHub repo.
+5. Set framework: **Vite**
+6. Deploy.
+
+Your live link will appear in your Vercel dashboard.
+Add that link here:
+
+```
+Live Demo: https://your-vercel-link.vercel.app
+```
+
+---
+
+## Save Flow JSON Example
+
+```
+FLOW_SAVED {
+  nodes: [...],
+  edges: [...]
+}
+```
+
+The output is visible in DevTools console.
+
+---
+
+## Folder Structure
+
+```
+src
+│ App.jsx
+│ main.jsx
+│ styles.css
+│
+├─ nodes
+│   └─ TextNode.jsx
+│
+├─ panels
+│   ├─ NodesPanel.jsx
+│   └─ SettingsPanel.jsx
+```
+
+---
+
+## How This Meets the Assignment Requirements
+
+### Drag Text Message node into canvas
+
+### Select node to edit text in Settings Panel
+
+### Only one outgoing edge from source handle
+
+### Multiple incoming edges allowed
+
+### Validation for multiple root nodes
+
+### Save Flow prints JSON
+
+### Clean UI, good code structure, commented logic
+
+---
+
+## Author
+
+Dhruv Joshi
+
+---
+
+## Notes
+
+This project goes beyond the basic assignment expectations by delivering a polished UI, animations, professional layout, and enhanced usability features.
+
+---
